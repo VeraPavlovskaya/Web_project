@@ -7,8 +7,8 @@
 4. Project Description: При запуске файла main.py появляется ссылка на веб сайт. В файле authorize.py будет храниться функция, вызывающая файл index.html, в котором на html будет написан код формы с авторизацией. Элменты стиля с использованием компонентов bootstrap формы будут прописаны в файле style.css. После успешной авторизации на сайте или входа при раннем заполнении формы, пользователь рорадает на главную страницу сайта. 
 
 5. 
-    ![Тут текст](/home/LYC1501.LOCAL/pavlovskaya.v/PycharmProjects/WEB_Project/materials/site_screenshot/Authorization_page.png)
-    ![Тут текст](/home/LYC1501.LOCAL/pavlovskaya.v/PycharmProjects/WEB_Project/materials/site_screenshot/Main_page.png)
+    ![Тут текст](https://github.com/VeraPavlovskaya/Web_project/blob/master/materials/site_screenshot/Authorization_page.png)
+    ![Тут текст](https://github.com/VeraPavlovskaya/Web_project/blob/master/materials/site_screenshot/Main_page.png)
     Как только пользователь заходит на сайт, он попадает на окно авторизации(рис1). Если он уже авторизован, то он входит в свой аккаунт.
     Далее открывается главная страничка(рис2). У главного окна есть много разных функций. При нажатии на кнопку: "Полезные определения", отображается страничка с географическими определениями, которые могут быть полезными для учеников.
     При нажатии на кнопку: "Контурные карты", отображается страничка с контурными картами, которые можно скачать.
