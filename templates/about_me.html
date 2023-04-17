@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link rel="stylesheet"
+        href="../static/css/info.css">
+</head>
+<body bgcolor="#FFF8DC">
+    <h1>
+        Информация об авторе
+    </h1>
+    <p>
+        Меня зовут Вера. Я учусь в 9 классе.
+        Занимаюсь программированием в лицее академии яндекса уже почти 2 года.
+        Разработка Web-сайта - это мой 3 проект. Планирую в будущем стать программистом.
+        Занятия программированием приносят мне радость.
+        Хотя и не всегда всё получается, но я никогда не здаюсь и всегда стремлюсь быть лучше.
+        Ознакомиться со всеми моими проектами или конкретно с проектом Web можно перейдя по ссылке на Github:
+    </p>
+    <ul class="nav">
+  <li class="active">
+    <a href="https://github.com/VeraPavlovskaya">https://github.com/VeraPavlovskaya</a>
+  </li>
+  <li><a href="https://github.com/VeraPavlovskaya/Web_project/tree/master">https://github.com/VeraPavlovskaya/Web_project/tree/master</a></li>
+</ul>
+    <div class="profile_pic">
+        <img src="{{url_for('static', filename='My_pic.jpg')}}">
+    </div>
+
+    <div class="pagination">
+        <p>Скоро появится больше страничек</p>
+        <li class="disabled"><span></span>1</li>
+        <li class="active"><span>2</span></li>
+    </div>
+
+    <div class="go_to_homepage">
+        <a class="go_to_homepage" href="{{url_for('Geo_Core')}}"> Перейти на главную</a>
+    </div>
+
+</body>
+</html>

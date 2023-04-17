@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Полезные географические ресурсы</h1>
+
+    <div class="main">
+        <a href="{{url_for('contur_maps')}}">
+            <div class="alert alert-info" role="alert">
+              Контурные карты
+            </div>
+        </a>
+        <a href="{{url_for('definitions')}}">
+            <div class="alert alert-success" role="alert">
+              Географические определения
+            </div>
+        </a>
+        <a href="{{url_for('subjects')}}">
+        <div class="alert alert-warning" role="alert">
+          Определение города к субъекту
+        </div>
+        </a>
+        <a href="{{url_for('notes')}}">
+            <div class="alert alert-primary" role="alert">
+              Заметки на полях
+            </div>
+        </a>
+        <a href="{{url_for('about_me')}}" target="_blank">
+            <div class="alert alert-danger" role="alert">
+              Информация об авторе сайта
+            </div>
+        </a>
+        <a href="{{url_for('future_works')}}">
+            <div class="alert alert-primary" role="alert">
+              Будущие доработки
+            </div>
+        </a>
+    </div>
+{% endblock %}
