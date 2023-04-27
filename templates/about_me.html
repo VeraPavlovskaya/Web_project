@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About me</title>
-    <link rel="stylesheet"
-        href="../static/css/info.css">
-</head>
-<body bgcolor="#FFF8DC">
+{% extends "base.html" %}
+
+{% block content %}
     <h1>
         Информация об авторе
     </h1>
@@ -26,17 +20,16 @@
 </ul>
     <div class="profile_pic">
         <img src="{{url_for('static', filename='My_pic.jpg')}}">
-    </div>
-
-    <div class="pagination">
         <p>Скоро появится больше страничек</p>
         <li class="disabled"><span></span>1</li>
         <li class="active"><span>2</span></li>
     </div>
 
+
+
+
     <div class="go_to_homepage">
         <a class="go_to_homepage" href="{{url_for('Geo_Core')}}"> Перейти на главную</a>
     </div>
 
-</body>
-</html>
+{% endblock %}
