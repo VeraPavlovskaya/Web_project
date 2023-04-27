@@ -2,7 +2,9 @@
 
 {% block content %}
     <h1>Полезные географические ресурсы</h1>
-
+<table style="width:100%;" >
+    <tr style="width:45%;">
+        <td>
     <div class="main">
         <a href="{{url_for('contur_maps')}}">
             <div class="alert alert-info" role="alert">
@@ -16,7 +18,7 @@
         </a>
         <a href="{{url_for('subjects')}}">
         <div class="alert alert-warning" role="alert">
-          Определение города к субъекту
+          Поиск субъектов РФ
         </div>
         </a>
         <a href="{{url_for('notes')}}">
@@ -35,4 +37,11 @@
             </div>
         </a>
     </div>
+        </td>
+        <td>
+            <img src="static/images/world_map1.jpg"
+   width="450" height="443" class="transparent25">
+        </td>
+    </tr>
+</table>
 {% endblock %}
