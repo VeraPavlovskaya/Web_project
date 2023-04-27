@@ -13,10 +13,8 @@ class RegisterForm(FlaskForm):
     submit = SubmitField('Создать')
 
 
-# 5. Сделаем форму авторизации пользователя, назовем ее LoginForm.
-# Она будет практически совпадать с той,
-# что мы делали на уроке знакомства с flask-wtf:
-# далее сделаем к ней шаблон login.html
+# Сделаем форму авторизации пользователя, назовем ее LoginForm.
+# Далее сделаем к ней шаблон login.html
 # И, наконец, сделаем обработчик адреса /login: см файл main.py
 class LoginForm(FlaskForm):
     email = EmailField('Почта', validators=[DataRequired()])
