@@ -1,7 +1,6 @@
 from flask import Flask, url_for, render_template, redirect, request, abort
 
-# Вот этот комменатрий попал в гит!!! 27 апреля 2023 года 17:32 минуты.
-# 1. Выполним первоначальную настройку модуля. Сначала импортируем нужный класс:
+# Выполним первоначальную настройку модуля. Сначала импортируем нужный класс:
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
 from forms.news import NewsForm
@@ -12,14 +11,13 @@ from data import db_session
 
 app = Flask(__name__)
 
-########################################################################################################################
-# 2. Затем сразу после создания приложения flask инициализируем LoginManager:
+# Затем сразу после создания приложения flask инициализируем LoginManager:
 login_manager = LoginManager()
 login_manager.init_app(app)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
-# 3. Для верной работы flask-login у нас должна быть
+# Для верной работы flask-login у нас должна быть
 # функция load_user для получения пользователя
 # украшенная декоратором login_manager.user_loader. Добавим ее:
 @login_manager.user_loader
@@ -27,7 +25,8 @@ def load_user(user_id):
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
 
-# 4. Кроме того, наша модель для пользователей
+
+# Кроме того, наша модель для пользователей
 # должна содержать ряд методов
 # для корректной работы flask-login,
 # но мы не будем создавать их руками,
@@ -133,7 +132,7 @@ def reqister():
     return render_template('register.html', title='Регистрация', form=form)
 
 
-# 7. И, наконец, сделаем обработчик адреса /login:
+# Сделаем обработчик адреса /login:
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     # Не забудьте импортировать класс LoginForm и метод login_user из модуля flask-login.
@@ -156,37 +155,42 @@ def login():
     return render_template('login.html', title='Авторизация', form=form)
 
 
-
-########################################################################################################################
-
-
-
+# Сделаем обработчик адреса /Subjects:
 @app.route('/Subjects')
-###
 def subjects():
     return render_template("subjects.html", name='subjects')
+
+# Сделаем обработчик адреса /Future_works (страничка с будущими доработками):
 @app.route('/Future_works')
 def future_works():
     return render_template("future_works.html", name='future_works')
+
+# Также сделаем обработчик адреса /About_me (страничка о себе):
 @app.route('/About_me')
 def about_me():
     return render_template("about_me.html", name='about_me')
+
+# Также сделаем обработчик адреса /About_me (страничка о себе):
 @app.route('/Definitions')
 def definitions():
     return render_template("definitions.html", name='definitions')
 
+# Также сделаем обработчик адреса /Contur_maps (страничка с контурными картами):
 @app.route('/Contur_maps')
 def contur_maps():
     return render_template("contur_maps.html", name='contur_maps')
 
+# Обязательно сделаем обработчик адреса / /Geo_Core (т.к. это главная страница):
 @app.route('/')
 @app.route('/Geo_Core')
 def Geo_Core():
     return render_template("index.html")
 
+
 def main():
     db_session.global_init("db/blogs.db")
     app.run(port=8080, host='127.0.0.1')
+
 
 if __name__ == '__main__':
     main()
