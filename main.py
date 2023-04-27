@@ -1,5 +1,6 @@
 from flask import Flask, url_for, render_template, redirect, request, abort
 
+# Вот этот комменатрий попал в гит!!! 27 апреля 2023 года 17:32 минуты.
 # 1. Выполним первоначальную настройку модуля. Сначала импортируем нужный класс:
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
